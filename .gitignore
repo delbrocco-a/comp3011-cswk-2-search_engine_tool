@@ -1,0 +1,6 @@
+docs/.slides/
+__pycache__/
+*.pyc
+.pytest_cache/
+.coverage
+htmlcov/
