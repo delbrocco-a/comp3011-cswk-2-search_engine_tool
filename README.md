@@ -1,1 +1,17 @@
-# comp3011-cswk-2-search_engine_tool
+# COMP3011 Coursework 2: Search Engine Tool
+
+---
+
+## Project Overview + Purpose
+
+## Installation & Setup
+
+## Usage
+
+### Commands
+
+### Examples
+
+## Testing
+
+## Dependencies
