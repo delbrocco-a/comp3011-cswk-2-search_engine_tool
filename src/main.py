@@ -114,7 +114,10 @@ def cmd_find(indexer: Indexer, words: list[str]) -> None:
         print(f"No pages found containing: {query_str}")
         return
 
-    print(f"\nFound {len(results)} page(s) for '{query_str}' (ranked by TF-IDF):\n")
+    print(
+        f"\nFound {len(results)} page(s) for '{query_str}'"
+        " (ranked by TF-IDF):\n"
+    )
     for rank, (url, score) in enumerate(results, start=1):
         print(f"  {rank}. {url}  (score: {score:.6f})")
     print()

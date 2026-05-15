@@ -9,7 +9,7 @@ from pathlib import Path
 import pytest
 
 sys.path.insert(0, "src")
-from indexer import Indexer, Posting
+from indexer import Indexer, Posting  # noqa: E402
 
 # ------------------------------------------------------------------
 # Fixtures

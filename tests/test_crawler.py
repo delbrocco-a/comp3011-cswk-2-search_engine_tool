@@ -7,7 +7,7 @@ import pytest
 import requests
 
 sys.path.insert(0, "src")
-from crawler import WebCrawler
+from crawler import WebCrawler  # noqa: E402
 
 # ------------------------------------------------------------------
 # Fixtures
@@ -193,7 +193,9 @@ def test_crawl_visits_linked_pages(mock_get, mock_sleep, crawler):
 @patch("crawler.requests.Session.get")
 def test_crawl_does_not_revisit(mock_get, mock_sleep, crawler):
     """Each URL must be fetched at most once even if linked multiple times."""
-    html_with_self_link = f'<html><body><a href="{BASE}">Self</a></body></html>'
+    html_with_self_link = (
+        f'<html><body><a href="{BASE}">Self</a></body></html>'
+    )
     resp = Mock()
     resp.raise_for_status = Mock()
     resp.text = html_with_self_link

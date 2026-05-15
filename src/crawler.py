@@ -22,7 +22,9 @@ class WebCrawler:
     Space:      O(P) for visited set and frontier.
     """
 
-    def __init__(self, base_url: str, politeness: float = POLITENESS_SECONDS) -> None:
+    def __init__(
+        self, base_url: str, politeness: float = POLITENESS_SECONDS
+    ) -> None:
         """
         Args:
             base_url:    Seed URL and domain boundary.

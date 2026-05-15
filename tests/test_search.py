@@ -6,8 +6,8 @@ from io import StringIO
 import pytest
 
 sys.path.insert(0, "src")
-from indexer import Indexer, Posting
-from search import SearchEngine
+from indexer import Indexer, Posting  # noqa: E402
+from search import SearchEngine  # noqa: E402
 
 # ------------------------------------------------------------------
 # Fixtures
@@ -22,7 +22,9 @@ URL_C = "https://example.com/c"
 def engine():
     """Engine over a 3-document index with known TF-IDF values."""
     idx = Indexer()
-    idx.index_page(URL_A, "<html><body>love life love friendship</body></html>")
+    idx.index_page(
+        URL_A, "<html><body>love life love friendship</body></html>"
+    )
     idx.index_page(URL_B, "<html><body>love wisdom knowledge</body></html>")
     idx.index_page(URL_C, "<html><body>life wisdom beauty</body></html>")
     idx.compute_tfidf()
